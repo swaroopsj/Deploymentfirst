@@ -83,7 +83,6 @@ function getgenderValue() {
     var Credit_History	= getcreditValue("uicredit");
     var Property_Area = getareaValue("uiarea");
     var approval_status =  document.getElementById("uiapprove");
-    //approval_status.innerHTML ="<h2>" + "hello" + "</h2>";
     var url = "/predict_home_price"; 
      
     
