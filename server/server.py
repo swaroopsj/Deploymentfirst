@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify, render_template
-import  util as util
+from  server import util as util
 
 app = Flask(__name__, static_url_path="/client", static_folder='../client', template_folder="../client")
 
@@ -15,6 +15,7 @@ def get_gender():
     })
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
+
 
 @app.route('/predict_loan_status', methods=['POST'])
 def estimated_status():
@@ -38,6 +39,8 @@ def estimated_status():
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
+
 if __name__ == '__main__':
     print("starting python flask server for loan status prediction")
+
     app.run(debug=True)
